@@ -1,11 +1,10 @@
 import React from 'react'
-import HtmlHead from '../components/HtmlHead'
+import Layout from '../components/Layout'
 
 export default function Home () {
   return (
-    <>
-      <HtmlHead />
+    <Layout>
       <div>Hello world!</div>
-    </>
+    </Layout>
   )
 }
