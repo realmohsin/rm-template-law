@@ -16,6 +16,14 @@ module.exports = {
         path: `${__dirname}/src/assets/images/`
       }
     },
+    {
+      resolve: 'gatsby-plugin-material-ui',
+      options: {
+        stylesProvider: {
+          injectFirst: true
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`
   ]
