@@ -24,6 +24,10 @@ const HtmlHead = ({ title, description }) => {
         name='description'
         content={description || site.siteMetadata.description}
       />
+      <link
+        href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Piazzolla&display=swap'
+        rel='stylesheet'
+      />
     </Helmet>
   )
 }
