@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import StickyCTA from '../components/Headers/StickyCTA'
 import LogoHeader from '../components/Headers/LogoHeader'
+import HeroSection from '../components/HomePage/HeroSection'
 
 // const useStyles = makeStyles(theme => ({
 //   testClass: {
@@ -26,7 +27,7 @@ export default function Home ({ data }) {
         fluid={data.contentfulRomanoHomePage.heroImage1.fluid}
         alt={'contentful'}
       /> */}
-      <div style={{ height: '2000px' }} />
+      <HeroSection />
     </Layout>
   )
 }

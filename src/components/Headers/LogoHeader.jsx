@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   },
   logoHeader: {
     background: theme.palette.primary.main,
-    padding: '10rem 0 6rem'
+    padding: '10rem 0 7rem'
   },
   logo: {
     width: '20rem',
@@ -41,13 +41,13 @@ const LogoHeader = () => {
   `)
 
   return (
-    <header className={classes.logoHeader}>
+    <div className={classes.logoHeader}>
       <Img
         fluid={data.file.childImageSharp.fluid}
         alt={'Romano Law Logo'}
         className={classes.logo}
       />
-    </header>
+    </div>
   )
 }
 

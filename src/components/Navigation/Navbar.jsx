@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { Container } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
@@ -24,9 +23,11 @@ const useStyles = makeStyles(theme => ({
     marginTop: '-2.2rem'
   },
   navbar: {
-    border: `2px solid ${theme.palette.secondary.main}`,
+    border: `2px solid ${theme.palette.secondary.dark}`,
     borderRadius: '1rem',
-    backgroundColor: 'white'
+    backgroundColor: '#F9F9F9',
+    backgroundColor: theme.palette.primary.dark,
+    boxShadow: theme.shadows[6]
   },
   navList: {
     display: 'flex'
@@ -43,11 +44,12 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    padding: '1rem 0',
+    padding: '0.9rem 0',
     height: '100%',
     color: theme.palette.primary.dark,
+    color: theme.palette.secondary.main,
     // background: theme.palette.primary.dark,
-    borderRight: `2px solid ${theme.palette.secondary.main}`
+    borderRight: `2px solid ${theme.palette.secondary.dark}`
   },
   lastNavLink: {
     borderRight: 'none'
@@ -55,17 +57,10 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const Navbar = props => {
-  const theme = useTheme()
   const classes = useStyles()
 
-  const [state, setState] = useState('initial-state')
-
-  useEffect(() => {
-    return () => {}
-  }, [])
-
   return (
-    <Container className={classes.navContainer}>
+    <Container component='header' className={classes.navContainer}>
       <nav className={classes.navbar}>
         <ul className={classes.navList}>
           <li className={classes.navItem}>

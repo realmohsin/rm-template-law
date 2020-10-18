@@ -16,7 +16,7 @@ const Layout = ({ title, description, children }) => {
         <StickyCTA />
         <LogoHeader />
         <Navbar />
-        {children}
+        <main>{children}</main>
       </ThemeProvider>
     </>
   )
