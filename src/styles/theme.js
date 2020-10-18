@@ -49,6 +49,9 @@ const theme = createMuiTheme({
         '::selection': {
           backgroundColor: primaryColor,
           color: 'white'
+        },
+        'a, button': {
+          cursor: 'pointer'
         }
       }
     }

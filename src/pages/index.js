@@ -1,20 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import { Typography } from '@material-ui/core'
+// import { makeStyles } from '@material-ui/core/styles'
 import Layout from '../components/Layout'
-import Logo from '../svg-components/Logo'
 import StickyCTA from '../components/Headers/StickyCTA'
+import LogoHeader from '../components/Headers/LogoHeader'
 
-const useStyles = makeStyles(theme => ({
-  testClass: {
-    color: 'red'
-  }
-}))
+// const useStyles = makeStyles(theme => ({
+//   testClass: {
+//     color: 'red'
+//   }
+// }))
 
 export default function Home ({ data }) {
-  const classes = useStyles()
+  // const classes = useStyles()
   return (
     <Layout>
       {/* <Img fixed={data.file.childImageSharp.fixed} alt={'Romano Law Logo'} />
@@ -28,7 +26,7 @@ export default function Home ({ data }) {
         fluid={data.contentfulRomanoHomePage.heroImage1.fluid}
         alt={'contentful'}
       /> */}
-      <StickyCTA />
+      <div style={{ height: '2000px' }} />
     </Layout>
   )
 }

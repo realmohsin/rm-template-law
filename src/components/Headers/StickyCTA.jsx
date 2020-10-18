@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import clsx from 'clsx'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { Grid, Typography } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
   example: {
@@ -25,14 +23,15 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     padding: '0.95rem',
     position: 'fixed',
-    boxShadow: theme.shadows[1],
+    // boxShadow: theme.shadows[1],
     zIndex: 100
   },
   stickyCtaText: {
     textTransform: 'uppercase',
     color: 'white',
-    fontSize: '1.7rem',
-    letterSpacing: '1px'
+    fontSize: '1.6rem',
+    letterSpacing: '1px',
+    fontWeight: 'normal'
   },
   ctaButton: {
     backgroundColor: 'transparent',
@@ -41,29 +40,28 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '1rem',
     padding: '0.75rem 1.5rem',
     transition: '0.3s all',
-    cursor: 'pointer',
     '&:hover': {
       color: theme.palette.secondary.main,
       backgroundColor: theme.palette.primary.main
     }
   },
   callButton: {
-    marginLeft: '2rem'
+    marginLeft: '2rem',
+    letterSpacing: '0.5px'
   },
   bookNowButton: {
     marginLeft: '2rem'
   }
 }))
 
-const StickyCTA = props => {
-  const theme = useTheme()
+const StickyCTA = () => {
   const classes = useStyles()
 
   return (
     <div className={classes.stickyCta}>
-      <Typography className={classes.stickyCtaText} variant='h5'>
+      <h5 className={classes.stickyCtaText}>
         Contact an Experienced Business Lawyer Now
-      </Typography>
+      </h5>
       <button className={clsx(classes.ctaButton, classes.callButton)}>
         (212) 865-8989
       </button>
