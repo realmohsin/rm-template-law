@@ -5,7 +5,6 @@ import { makeStyles, useTheme } from '@material-ui/core/styles'
 import { Typography } from '@material-ui/core'
 import Layout from '../components/Layout'
 import Logo from '../svg-components/Logo'
-import StickyCTA from '../components/Headers/StickyCTA'
 
 const useStyles = makeStyles(theme => ({
   testClass: {
@@ -17,7 +16,7 @@ export default function Home ({ data }) {
   const classes = useStyles()
   return (
     <Layout>
-      {/* <Img fixed={data.file.childImageSharp.fixed} alt={'Romano Law Logo'} />
+      <Img fixed={data.file.childImageSharp.fixed} alt={'Romano Law Logo'} />
       <Logo />
       <div className={classes.testClass}>Hello world!</div>
       <Typography variant='body1'>
@@ -27,8 +26,7 @@ export default function Home ({ data }) {
       <Img
         fluid={data.contentfulRomanoHomePage.heroImage1.fluid}
         alt={'contentful'}
-      /> */}
-      <StickyCTA />
+      />
     </Layout>
   )
 }

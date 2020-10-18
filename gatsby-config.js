@@ -1,5 +1,14 @@
 const path = require(`path`)
 
+if (
+  process.env.NODE_ENV === 'development' ||
+  process.env.NODE_ENV === 'production'
+) {
+  require('dotenv').config({
+    path: '.env.development'
+  })
+}
+
 module.exports = {
   siteMetadata: {
     title: 'Business Lawyer New York - Entertainment Lawyer NYC',
@@ -14,6 +23,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images/`
+      }
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        forceFullSync: true
       }
     },
     {
