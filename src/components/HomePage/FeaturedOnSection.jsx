@@ -7,8 +7,7 @@ import { Container } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   featuredOnSection: {
-    paddingTop: '12rem',
-    paddingBottom: '12rem',
+    padding: '12rem 0',
     backgroundColor: 'white'
   },
   featuredOnTitle: {
