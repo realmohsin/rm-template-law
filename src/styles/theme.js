@@ -66,7 +66,9 @@ const theme = createMuiTheme({
       fontFamily: ['PT Serif', 'serif'].join(', '),
       fontSize: '4.6rem',
       color: primaryColor,
-      fontWeight: 'normal'
+      fontWeight: 'normal',
+      marginBottom: '8rem',
+      textAlign: 'center'
     },
     title3: {
       fontFamily: [

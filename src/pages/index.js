@@ -7,6 +7,7 @@ import LogoHeader from '../components/Headers/LogoHeader'
 import HeroSection from '../components/HomePage/HeroSection'
 import FeaturedOnSection from '../components/HomePage/FeaturedOnSection'
 import IntroSection from '../components/HomePage/IntroSection'
+import InstagramSection from '../components/HomePage/InstagramSection'
 
 // const useStyles = makeStyles(theme => ({
 //   testClass: {
@@ -32,6 +33,7 @@ export default function Home ({ data }) {
       <HeroSection />
       <FeaturedOnSection />
       <IntroSection />
+      <InstagramSection />
     </Layout>
   )
 }
