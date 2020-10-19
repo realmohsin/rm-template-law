@@ -26,8 +26,8 @@ const useStyles = makeStyles(theme => ({
     border: `2px solid ${theme.palette.secondary.dark}`,
     borderRadius: '1rem',
     backgroundColor: '#F9F9F9',
-    backgroundColor: theme.palette.primary.dark,
-    boxShadow: theme.shadows[6]
+    backgroundColor: theme.palette.primary.dark
+    // boxShadow: theme.shadows[6]
   },
   navList: {
     display: 'flex'

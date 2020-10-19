@@ -63,16 +63,28 @@ const theme = createMuiTheme({
       color: primaryColor
     },
     title2: {
-      fontFamily: ['Piazzolla', 'serif'].join(', '),
-      fontSize: '3.4rem',
-      color: secondaryColor
+      fontFamily: ['PT Serif', 'serif'].join(', '),
+      fontSize: '4.2rem',
+      color: primaryColor,
+      fontWeight: 'normal'
     },
     title3: {
+      fontFamily: [
+        // 'Playfair Display',
+        // 'Noto Serif JP',
+        'PT Serif',
+        'serif'
+      ].join(', '),
+      fontSize: '3.4rem',
+      color: secondaryColor,
+      fontWeight: 'normal'
+    },
+    title4: {
       fontSize: '1.8rem',
       color: primaryColor,
       textTransform: 'uppercase'
     },
-    title4: {
+    title5: {
       fontSize: '1.5rem',
       color: secondaryColor,
       textTransform: 'uppercase'

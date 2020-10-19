@@ -25,7 +25,7 @@ const HtmlHead = ({ title, description }) => {
         content={description || site.siteMetadata.description}
       />
       <link
-        href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Piazzolla&display=swap'
+        href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Piazzolla&family=PT+Serif&family=Noto+Serif+JP&family=Cinzel&family=Playfair+Display&display=swap'
         rel='stylesheet'
       />
     </Helmet>
