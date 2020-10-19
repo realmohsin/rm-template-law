@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     ...theme.custom.title3,
     textAlign: 'center',
     fontSize: '2rem',
-    marginBottom: '2rem',
+    marginBottom: '3.5rem',
     textTransform: 'uppercase',
     letterSpacing: '0.5px'
   },
@@ -39,13 +39,13 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center'
   },
   featuredCompanyImg: {
-    width: '22.5rem'
+    width: '19.1rem'
   },
   divider: {
     width: '100%',
     height: '2px',
     backgroundColor: theme.palette.secondary.main,
-    marginBottom: '1.8rem'
+    marginBottom: '2rem'
   },
   bottomDivider: {
     marginTop: '8rem'
@@ -61,8 +61,8 @@ const useStyles = makeStyles(theme => ({
       gridTemplateColumns: 'repeat(2, 1fr)'
     }
   },
-  recognitionImg: {
-    width: '14.2rem'
+  superLawyersImg: {
+    width: '19.1rem'
   }
 }))
 
@@ -79,12 +79,31 @@ const FeaturedOnSection = () => {
           }
         }
       }
-      recognition: allFile(filter: { name: { regex: "/^recognition-/" } }) {
-        nodes {
-          childImageSharp {
-            fluid(maxWidth: 220, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+      recognition1: file(name: { eq: "recognition-1" }) {
+        childImageSharp {
+          fixed(width: 142, height: 136) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      recognition2: file(name: { eq: "recognition-2" }) {
+        childImageSharp {
+          fixed(width: 156, height: 124) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      recognition3: file(name: { eq: "recognition-3" }) {
+        childImageSharp {
+          fluid(maxWidth: 220) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      recognition4: file(name: { eq: "recognition-4" }) {
+        childImageSharp {
+          fluid(maxWidth: 220) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -110,15 +129,32 @@ const FeaturedOnSection = () => {
         <div className={clsx(classes.divider, classes.bottomDivider)} />
         <h2 className={classes.featuredOnTitle}>Recognition</h2>
         <div className={classes.recognitionGrid}>
-          {data.recognition.nodes.map(node => (
-            <div className={classes.gridItem}>
-              <Img
-                fluid={node.childImageSharp.fluid}
-                alt='Logo of company Romano Law has been featured in'
-                className={classes.recognitionImg}
-              />
-            </div>
-          ))}
+          <div className={classes.gridItem}>
+            <Img
+              fixed={data.recognition1.childImageSharp.fixed}
+              alt='Award of Recognition for Romano Law'
+            />
+          </div>
+          <div className={classes.gridItem}>
+            <Img
+              fixed={data.recognition2.childImageSharp.fixed}
+              alt='Award of Recognition for Romano Law'
+            />
+          </div>
+          <div className={classes.gridItem}>
+            <Img
+              fluid={data.recognition3.childImageSharp.fluid}
+              alt='Award of Recognition for Romano Law'
+              className={classes.superLawyersImg}
+            />
+          </div>
+          <div className={classes.gridItem}>
+            <Img
+              fluid={data.recognition4.childImageSharp.fluid}
+              alt='Award of Recognition for Romano Law'
+              className={classes.superLawyersImg}
+            />
+          </div>
         </div>
       </Container>
     </section>
