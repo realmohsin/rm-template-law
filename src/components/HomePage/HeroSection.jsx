@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { Grid } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
   example: {
@@ -38,8 +36,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const HeroSection = props => {
-  const theme = useTheme()
+const HeroSection = () => {
   const classes = useStyles()
   const data = useStaticQuery(graphql`
     query {

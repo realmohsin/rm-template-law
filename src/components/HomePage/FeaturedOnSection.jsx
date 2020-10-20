@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { Container } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({

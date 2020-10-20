@@ -2,12 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 // import { makeStyles } from '@material-ui/core/styles'
 import Layout from '../components/Layout'
-import StickyCTA from '../components/Headers/StickyCTA'
-import LogoHeader from '../components/Headers/LogoHeader'
 import HeroSection from '../components/HomePage/HeroSection'
 import FeaturedOnSection from '../components/HomePage/FeaturedOnSection'
 import IntroSection from '../components/HomePage/IntroSection'
 import InstagramSection from '../components/HomePage/InstagramSection'
+import BlogMediaSection from '../components/HomePage/BlogMediaSection'
 
 // const useStyles = makeStyles(theme => ({
 //   testClass: {
@@ -34,6 +33,7 @@ export default function Home ({ data }) {
       <FeaturedOnSection />
       <IntroSection />
       <InstagramSection />
+      <BlogMediaSection />
     </Layout>
   )
 }

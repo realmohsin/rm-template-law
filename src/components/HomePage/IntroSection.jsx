@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 import { Container, Grid, Typography } from '@material-ui/core'
 import lightBg from '../../assets/images/light-bg.png'
 
@@ -22,9 +21,7 @@ const useStyles = makeStyles(theme => ({
     background: `radial-gradient(circle, rgba(239,249,249, 0.9) 0%, rgba(255, 255, 255, 0.4) 100%), url(${lightBg})`
   },
   introTitle: {
-    ...theme.custom.title2,
-    marginBottom: '8rem',
-    textAlign: 'center'
+    ...theme.custom.title2
   },
   introSecondaryTitle: {
     ...theme.custom.title3
@@ -54,7 +51,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const IntroSection = props => {
+const IntroSection = () => {
   const classes = useStyles()
 
   return (

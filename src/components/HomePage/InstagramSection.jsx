@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { makeStyles } from '@material-ui/core/styles'
 import { Container, Grid } from '@material-ui/core'
 import LinkButton from '../LinkButton'
 
@@ -39,8 +38,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const InstagramSection = props => {
-  const theme = useTheme()
+const InstagramSection = () => {
   const classes = useStyles()
   const data = useStaticQuery(graphql`
     query {

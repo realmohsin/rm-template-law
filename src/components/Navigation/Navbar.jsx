@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import clsx from 'clsx'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { Container } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   navbar: {
     border: `2px solid ${theme.palette.secondary.dark}`,
     borderRadius: '1rem',
-    backgroundColor: '#F9F9F9',
+    // backgroundColor: '#F9F9F9',
     backgroundColor: theme.palette.primary.dark
     // boxShadow: theme.shadows[6]
   },
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     padding: '0.9rem 0',
     height: '100%',
-    color: theme.palette.primary.dark,
+    // color: theme.palette.primary.dark,
     color: theme.palette.secondary.main,
     // background: theme.palette.primary.dark,
     borderRight: `2px solid ${theme.palette.secondary.dark}`
@@ -64,28 +64,42 @@ const Navbar = props => {
       <nav className={classes.navbar}>
         <ul className={classes.navList}>
           <li className={classes.navItem}>
-            <a className={classes.navLink}>Home</a>
+            <a href='/' className={classes.navLink}>
+              Home
+            </a>
           </li>
           <li className={classes.navItem}>
-            <a className={classes.navLink}>About</a>
+            <a href='/' className={classes.navLink}>
+              About
+            </a>
           </li>
           <li className={classes.navItem}>
-            <a className={classes.navLink}>Business Law</a>
+            <a href='/' className={classes.navLink}>
+              Business Law
+            </a>
           </li>
           <li className={clsx(classes.navItem, classes.entertainmentLawItem)}>
-            <a className={classes.navLink}>Entertainment Law</a>
+            <a href='/' className={classes.navLink}>
+              Entertainment Law
+            </a>
           </li>
           <li className={classes.navItem}>
-            <a className={classes.navLink}>Disputes</a>
+            <a href='/' className={classes.navLink}>
+              Disputes
+            </a>
           </li>
           <li className={classes.navItem}>
-            <a className={classes.navLink}>Blog</a>
+            <a href='/' className={classes.navLink}>
+              Blog
+            </a>
           </li>
           <li className={classes.navItem}>
-            <a className={classes.navLink}>Careers</a>
+            <a href='/' className={classes.navLink}>
+              Careers
+            </a>
           </li>
           <li className={classes.navItem}>
-            <a className={clsx(classes.navLink, classes.lastNavLink)}>
+            <a href='/' className={clsx(classes.navLink, classes.lastNavLink)}>
               Contact
             </a>
           </li>
